@@ -5,6 +5,14 @@
     <title>Title</title>
     <script src="javascript/jQuery.min.js"></script>
     <script src="javascript/backstretch.min.js"></script>
+    <style>
+      .box {
+  width: 300px;
+  border: 15px solid;
+  padding: 50px;
+  margin: 20px;
+  }
+    </style>
   </head>
   <body>
     <script>
@@ -12,8 +20,15 @@
       function PLAYaudio() {
         const music = new Audio('asdf.wav');
         music.play();
-        
+        document.getElementById(“playing”).innerHTML = “Now playing wIth mY hEarT”;
+        await sleep(90600);
+        document.getElementById(“playing”).innerHTML = “Now playing Our Morning Come”;
         await sleep(186000);
+        document.getElementById(“playing”).innerHTML = “Now playing 10 Bilion Souls”;
+        await sleep(133200);
+        document.getElementById(“playing”).innerHTML = “Now playing Amazorn.coriod”;
+        await sleep(61800);
+        document.getElementById(“playing”).innerHTML = “Nothing is playing”;
       }
     </script>
     <section style="background-color: gray;">
@@ -21,8 +36,11 @@
         <img src="Untitled design.png"></img>
       <h5>Duoipeia</h5>
       </div>
-      <p style="text-align: right;">This album was inspired by <a href="https://www.bandlab.com/dakota_pelot">ĐΔЌ𐍈ŤĄ ƤẸⱢØŦ</a></p>
-      
+      <p style="text-align: right;">This album was inspired by <a href="https://www.bandlab.com/dakota_pelot">ĐΔЌ𐍈ŤĄ ƤẸⱢØŦ.</a></p>
+      <article>
+        <h3 id="playing">Nothing is playing right now!</h3>
+        <button onclick="PLAYaudio()">play music</button>
+      </article>
     </section>
   </body>
 </html>
