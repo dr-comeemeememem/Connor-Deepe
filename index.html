@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Title</title>
-    <script src="jQuery.min.js"></script>
-    <script src="backstretch.min.js"></script>
     <style>
       .box {
   width: 300px;
@@ -17,10 +15,8 @@
   </head>
   <body>
     <script>
-      $.backstretch("6.jpeg");
       function PLAYaudio() {
-        const music = new Audio('asdf.mp3');
-        music.play();
+        play('asdf.mp3');
         document.getElementById(“playing”).innerHTML = “Now playing wIth mY hEarT”;
         await sleep(90600);
         document.getElementById(“playing”).innerHTML = “Now playing Our Morning Come”;
