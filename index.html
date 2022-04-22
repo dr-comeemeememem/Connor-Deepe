@@ -15,18 +15,17 @@
   </head>
   <body>
     <script>
-      function PLAYaudio() {
-        play('asdf.mp3');
-        document.getElementById(“playing”).innerHTML = “Now playing wIth mY hEarT”;
-        await sleep(90600);
-        document.getElementById(“playing”).innerHTML = “Now playing Our Morning Come”;
-        await sleep(186000);
-        document.getElementById(“playing”).innerHTML = “Now playing 10 Bilion Souls”;
-        await sleep(133200);
-        document.getElementById(“playing”).innerHTML = “Now playing Amazorn.coriod”;
-        await sleep(61800);
-        document.getElementById(“playing”).innerHTML = “Nothing is playing”;
-      }
+      var person = prompt("Please enter your name", "Harry Potter");
+      if (person != null) {
+        alert("Hello " + person + "! How are you today?");
+}
+      var aud = document.getElementById("myAudio");
+      aud.onstart = function1() {
+        document.getElementById("playing").innerHTML = "Now Playing The album!"
+      };
+      aud.onended = function() {
+        document.getElementById("playing").innerHTML = "Nothing is playing right now!"
+      };
     </script>
     <section style="background-color: gray;">
       <div class="box">
@@ -36,7 +35,9 @@
       <p style="text-align: justify;">This album was inspired by <a href="https://www.bandlab.com/dakota_pelot">ĐΔЌ𐍈ŤĄ ƤẸⱢØŦ.</a></p>
       <article>
         <h3 id="playing">Nothing is playing right now!</h3>
-        <button onclick="PLAYaudio()">play music</button>
+        <audio id="myAudio" controls>
+           <source src="asdf.mp3" type="audio/mpeg">
+        </audio>
       </article>
     </section>
   </body>
